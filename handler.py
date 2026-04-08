@@ -196,6 +196,9 @@ def handler(job):
         with open("/model.json", "r") as f:
             workflow = json.load(f)
 
+        # Extract model metadata before sending to ComfyUI
+        model_name = workflow.pop("_meta", {}).get("model_name", "unknown")
+
         workflow["3"]["inputs"]["text"] = prompt
         workflow["4"]["inputs"]["text"] = negative_prompt
         workflow["5"]["inputs"]["width"] = width
@@ -353,6 +356,7 @@ def handler(job):
             logger.info(f"Job completed: {job_id} (output {len(jpeg_data)} bytes)")
             return {
                 "image": f"data:image/jpeg;base64,{b64_image}",
+                "model": model_name,
                 "loras": lora_infos,
             }
 
