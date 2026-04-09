@@ -11,3 +11,7 @@ RUNPOD_API_KEY=your-actual-api-key
 Authorization: Bearer {RUNPOD_API_KEY}
 HF_TOKEN=$(cat /run/secrets/hf_token) && \
 wget -q "https://civitai.com/api/download/models/${MODEL_ID}?token=${CIVITAI_API_TOKEN}" \
+wget -q "https://civitai.com/api/download/models/2805032?token=${CIVITAI_API_TOKEN}" \
+wget -q "https://civitai.com/api/download/models/1461059?token=${CIVITAI_API_TOKEN}" \
+wget -q "https://civitai.com/api/download/models/2824082?token=${CIVITAI_API_TOKEN}" \
+wget -q "https://civitai.com/api/download/models/2514310?token=${CIVITAI_API_TOKEN}" \
