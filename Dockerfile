@@ -14,10 +14,10 @@ RUN cd /ComfyUI/custom_nodes && \
 # Install handler dependencies
 RUN pip install runpod websocket-client Pillow
 
-# Download Illustrious XL v2.0 (~6.9GB, public, ungated)
+# Download CyberRealistic Pony v16.0 (~6.5GB, public)
 RUN mkdir -p /ComfyUI/models/checkpoints && \
-    wget -q https://huggingface.co/OnomaAIResearch/Illustrious-XL-v2.0/resolve/main/Illustrious-XL-v2.0.safetensors \
-    -O /ComfyUI/models/checkpoints/Illustrious-XL-v2.0.safetensors
+    wget -q https://huggingface.co/cyberdelia/CyberRealisticPony/resolve/main/CyberRealisticPony_V16.0_FP16.safetensors \
+    -O /ComfyUI/models/checkpoints/CyberRealisticPony_V16.0_FP16.safetensors
 
 # Copy files
 COPY handler.py /handler.py

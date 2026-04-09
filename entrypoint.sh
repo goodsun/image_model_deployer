@@ -2,7 +2,7 @@
 set -e
 
 # Verify checkpoint exists
-CKPT_PATH="/ComfyUI/models/checkpoints/Illustrious-XL-v2.0.safetensors"
+CKPT_PATH="/ComfyUI/models/checkpoints/CyberRealisticPony_V16.0_FP16.safetensors"
 if [ ! -f "$CKPT_PATH" ]; then
     echo "ERROR: Checkpoint not found at $CKPT_PATH. Rebuild the image."
     exit 1

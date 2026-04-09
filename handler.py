@@ -1,5 +1,5 @@
 """
-RunPod Serverless Handler for Illustrious XL v2.0 Image Generation
+RunPod Serverless Handler for CyberRealistic Pony v16.0 Image Generation
 Text prompt -> Generated image (JPEG, Base64)
 """
 
@@ -120,7 +120,7 @@ def handler(job):
 
         # Append quality tags unless disabled
         if not input_data.get("no_quality_tags", False):
-            prompt = f"{prompt}, masterpiece, best quality, absurdres"
+            prompt = f"score_9, score_8_up, score_7_up, {prompt}"
 
         negative_prompt = input_data.get("negative_prompt", DEFAULT_NEGATIVE_PROMPT)
 
@@ -128,9 +128,9 @@ def handler(job):
         height = to_nearest_multiple_of_8(input_data.get("height", 1024), "height")
 
         try:
-            steps = int(input_data.get("steps", 28))
+            steps = int(input_data.get("steps", 25))
             seed = int(input_data.get("seed", 42))
-            cfg = float(input_data.get("cfg", 6.0))
+            cfg = float(input_data.get("cfg", 5.0))
             quality = int(input_data.get("quality", 90))
         except (TypeError, ValueError) as e:
             return {"error": f"Invalid parameter type: {e}"}
