@@ -14,10 +14,10 @@ RUN cd /ComfyUI/custom_nodes && \
 # Install handler dependencies
 RUN pip install runpod websocket-client Pillow
 
-# Download Illustrious XL v2.0 (~6.9GB, public, ungated)
+# Download Animagine XL 4.0 (~6.9GB, public)
 RUN mkdir -p /ComfyUI/models/checkpoints && \
-    wget -q https://huggingface.co/OnomaAIResearch/Illustrious-XL-v2.0/resolve/main/Illustrious-XL-v2.0.safetensors \
-    -O /ComfyUI/models/checkpoints/Illustrious-XL-v2.0.safetensors
+    wget -q https://huggingface.co/cagliostrolab/animagine-xl-4.0/resolve/main/animagine-xl-4.0.safetensors \
+    -O /ComfyUI/models/checkpoints/animagine-xl-4.0.safetensors
 
 # Copy files
 COPY handler.py /handler.py
