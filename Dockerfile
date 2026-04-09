@@ -14,10 +14,10 @@ RUN cd /ComfyUI/custom_nodes && \
 # Install handler dependencies
 RUN pip install runpod websocket-client Pillow
 
-# Download Illustrious XL v2.0 (~6.9GB, public, ungated)
+# Download Stable Diffusion XL Base 1.0 (~6.9GB, public)
 RUN mkdir -p /ComfyUI/models/checkpoints && \
-    wget -q https://huggingface.co/OnomaAIResearch/Illustrious-XL-v2.0/resolve/main/Illustrious-XL-v2.0.safetensors \
-    -O /ComfyUI/models/checkpoints/Illustrious-XL-v2.0.safetensors
+    wget -q https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors \
+    -O /ComfyUI/models/checkpoints/sd_xl_base_1.0.safetensors
 
 # Copy files
 COPY handler.py /handler.py
