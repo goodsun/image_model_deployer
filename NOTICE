@@ -1,0 +1,99 @@
+THIRD-PARTY LICENSES AND NOTICES
+=================================
+
+This project incorporates or depends on the following third-party
+components. Each component is subject to its own license terms.
+
+Users of this project must comply with ALL applicable licenses below
+in addition to the project's GPL-3.0 license.
+
+
+1. ComfyUI
+----------
+Copyright (c) comfyanonymous
+License: GNU General Public License v3.0 (GPL-3.0)
+Source:   https://github.com/comfyanonymous/ComfyUI
+Full license: https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE
+
+
+2. Illustrious XL v2.0 (AI Model)
+----------------------------------
+Copyright (c) OnomaAIResearch
+License: CreativeML Open RAIL
+Source:   https://huggingface.co/OnomaAIResearch/Illustrious-XL-v2.0
+
+Use-based restrictions apply. You MAY NOT use this model to:
+  - Exploit or harm minors
+  - Generate or disseminate verifiably false information to harm others
+  - Generate or disseminate personal identifiable information to harm individuals
+  - Defame, disparage, or harass others
+  - Make fully automated decisions that adversely affect legal rights
+  - Discriminate based on social behavior or protected characteristics
+  - Provide medical advice or interpret medical results
+  - Use in law enforcement for predicting criminal behavior
+  - Make immigration, legal, or medical decisions without human review
+
+
+3. Stable Diffusion XL (Base Architecture)
+------------------------------------------
+Copyright (c) Stability AI
+License: CreativeML Open RAIL++-M
+Source:   https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0
+Full license: https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/LICENSE.md
+
+The same use-based restrictions as Illustrious XL apply.
+Generated outputs are owned by the user.
+
+
+4. RunPod Python SDK
+--------------------
+Copyright (c) RunPod
+License: MIT License
+Source:   https://github.com/runpod/runpod-python
+
+
+5. Branch-Specific Models (Civitai)
+-----------------------------------
+The following models are available on separate branches and are
+downloaded from Civitai. Each model has its own license terms
+as specified by its creator on Civitai. Users must review and
+comply with the license terms on the respective Civitai pages.
+
+  - Realistic Freedom Omega (Branch: RealisticFreedom)
+    https://civitai.com/models/1461059
+
+  - PerfectDeliberate v9.0 (Branch: PerfectDeliberate)
+    https://civitai.com/models/24350
+
+  - Unholy Desire Mix - Sinister Aesthetic v8 (Branch: UnholyDesireMix-SinisterAestheticV8)
+    https://civitai.com/models/1307857
+
+  - WAI-Illustrious-SDXL v16.0 (Branch: WAI-Illustrious-SDXL)
+    https://civitai.com/models/2514310
+
+  - Pony Diffusion V6 XL (Branch: PonyDiffusionV6)
+    https://civitai.com/models/257749
+
+  - Animagine XL 4.0 (Branch: AnimagineXl4.0)
+    https://huggingface.co/cagliostrolab/animagine-xl-4.0
+
+  - AutismMix Pony (Branch: AutismMixPony)
+    https://huggingface.co/AIWorksMD/autismMix_pony
+
+  - CyberRealistic Pony (Branch: CyberRealisticPony)
+    https://huggingface.co/cyberdelia/CyberRealisticPony
+
+  - halcyon SDXL (Branch: halcyonSDXL)
+    https://huggingface.co/Rivaldo/halcyonSDXL_v17
+
+  - Momoiro Pony 1.5 (Branch: MomoiroPony1.5)
+    https://huggingface.co/Drditone/safetensors
+
+  - NoobAI XL (Branch: NoobAiXl)
+    https://huggingface.co/Laxhar/noobai-XL-1.1
+
+  - Nova XL (Branch: novaXl)
+    https://huggingface.co/datasets/John6666/model-mirror-26
+
+  - Stable Diffusion XL Base 1.0 (Branch: StableDiffusionXL)
+    https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0
