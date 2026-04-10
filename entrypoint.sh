@@ -1,10 +1,15 @@
 #!/bin/bash
 set -e
 
-# Verify checkpoint exists
-CKPT_PATH="/ComfyUI/models/checkpoints/Illustrious-XL-v2.0.safetensors"
+# Verify checkpoint exists and is valid
+CKPT_PATH="/ComfyUI/models/checkpoints/RealisticFreedom_Omega.safetensors"
 if [ ! -f "$CKPT_PATH" ]; then
     echo "ERROR: Checkpoint not found at $CKPT_PATH. Rebuild the image."
+    exit 1
+fi
+CKPT_SIZE=$(stat -c%s "$CKPT_PATH" 2>/dev/null || stat -f%z "$CKPT_PATH")
+if [ "$CKPT_SIZE" -lt 1000000000 ]; then
+    echo "ERROR: Checkpoint is only ${CKPT_SIZE} bytes (expected >1GB). File may be corrupted or an error page. Rebuild the image with a valid CIVITAI_API_TOKEN."
     exit 1
 fi
 echo "Checkpoint present ($(du -h "$CKPT_PATH" | cut -f1))"
