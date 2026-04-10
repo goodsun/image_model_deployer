@@ -14,10 +14,15 @@ RUN cd /ComfyUI/custom_nodes && \
 # Install handler dependencies
 RUN pip install runpod websocket-client Pillow
 
-# Download Illustrious XL v2.0 (~6.9GB, public, ungated)
-RUN mkdir -p /ComfyUI/models/checkpoints && \
-    wget -q https://huggingface.co/OnomaAIResearch/Illustrious-XL-v2.0/resolve/main/Illustrious-XL-v2.0.safetensors \
-    -O /ComfyUI/models/checkpoints/Illustrious-XL-v2.0.safetensors
+# Download Unholy Desire Mix Sinister Aesthetic v8 (~6.9GB, Civitai)
+ARG CIVITAI_API_TOKEN
+RUN test -n "$CIVITAI_API_TOKEN" || { echo "ERROR: CIVITAI_API_TOKEN is required"; exit 1; } && \
+    mkdir -p /ComfyUI/models/checkpoints && \
+    wget --progress=dot:giga \
+    "https://civitai.com/api/download/models/2824082?token=${CIVITAI_API_TOKEN}" \
+    -O /ComfyUI/models/checkpoints/UnholyDesireMixSinisterAesthetic_V8.safetensors && \
+    FILESIZE=$(stat -c%s /ComfyUI/models/checkpoints/UnholyDesireMixSinisterAesthetic_V8.safetensors 2>/dev/null || stat -f%z /ComfyUI/models/checkpoints/UnholyDesireMixSinisterAesthetic_V8.safetensors) && \
+    test "$FILESIZE" -gt 1000000000 || { echo "ERROR: Downloaded file too small (${FILESIZE} bytes). Civitai token may be invalid or model unavailable."; exit 1; }
 
 # Copy files
 COPY handler.py /handler.py

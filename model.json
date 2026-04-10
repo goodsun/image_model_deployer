@@ -1,11 +1,11 @@
 {
   "_meta": {
-    "model_name": "Illustrious XL v2.0"
+    "model_name": "Unholy Desire Mix - Sinister Aesthetic v8"
   },
   "1": {
     "class_type": "CheckpointLoaderSimple",
     "inputs": {
-      "ckpt_name": "Illustrious-XL-v2.0.safetensors"
+      "ckpt_name": "UnholyDesireMixSinisterAesthetic_V8.safetensors"
     }
   },
   "10": {
@@ -57,8 +57,8 @@
       "negative": ["4", 0],
       "latent_image": ["5", 0],
       "seed": 42,
-      "steps": 28,
-      "cfg": 6.0,
+      "steps": 20,
+      "cfg": 2.5,
       "sampler_name": "euler_ancestral",
       "scheduler": "normal",
       "denoise": 1.0
