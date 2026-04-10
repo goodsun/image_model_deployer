@@ -1,5 +1,5 @@
 """
-RunPod Serverless Handler for Illustrious XL v2.0 Image Generation
+RunPod Serverless Handler for WAI-illustrious-SDXL v16.0 Image Generation
 Text prompt -> Generated image (JPEG, Base64)
 """
 
@@ -128,7 +128,7 @@ def handler(job):
         height = to_nearest_multiple_of_8(input_data.get("height", 1024), "height")
 
         try:
-            steps = int(input_data.get("steps", 28))
+            steps = int(input_data.get("steps", 20))
             seed = int(input_data.get("seed", 42))
             cfg = float(input_data.get("cfg", 6.0))
             quality = int(input_data.get("quality", 90))
