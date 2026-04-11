@@ -19,3 +19,5 @@ wget -q "https://civitai.com/api/download/models/2514310?token=${CIVITAI_API_TOK
 "https://civitai.com/api/download/models/1461059?token=${CIVITAI_API_TOKEN}" \
 "https://civitai.com/api/download/models/2824082?token=${CIVITAI_API_TOKEN}" \
 "https://civitai.com/api/download/models/2514310?token=${CIVITAI_API_TOKEN}" \
+Civitaiモデルのビルドには `--build-arg CIVITAI_API_TOKEN=...` が必要です。
+docker build --build-arg CIVITAI_API_TOKEN=your-token -t image-model-deployer .
